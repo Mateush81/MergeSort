@@ -35,7 +35,7 @@ int main() {
 	// sortowanie wektora double'ów
     MergeSort<double>::sort(b);
 
-	// wyœwietlanie posortowanego wektora double'ów
+    // wyœwietlanie posortowanego wektora double'ów
     cout << "Posortowane double: ";
     for (const auto& x : b) cout << x << " ";
     cout << endl;

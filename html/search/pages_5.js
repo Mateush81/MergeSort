@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['programu_20main_20cpp_0',['1. Uruchamianie programu (&lt;span class=&quot;tt&quot;&gt;main.cpp&lt;/span&gt;)',['../md__r_e_a_d_m_e.html',1,'']]]
+];

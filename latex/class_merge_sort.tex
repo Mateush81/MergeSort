@@ -1,0 +1,62 @@
+\doxysection{Merge\+Sort\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_merge_sort}{}\label{class_merge_sort}\index{MergeSort$<$ T $>$@{MergeSort$<$ T $>$}}
+
+
+Klasa implementuj¹ca algorytm sortowania przez scalanie (Merge Sort).  
+
+
+
+
+{\ttfamily \#include $<$mergesort.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_merge_sort_a0cc3836829698a409f989019b58a7f15}{sort}} (std\+::vector$<$ T $>$ \&arr)
+\begin{DoxyCompactList}\small\item\em Sortuje wektor arr za pomoc¹ algorytmu sortowania przez scalanie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Merge\+Sort$<$ T $>$}
+Klasa implementuj¹ca algorytm sortowania przez scalanie (Merge Sort). 
+
+Szablon klasy pozwala na sortowanie wektorów dowolnego typu T, pod warunkiem, ¿e typ T obs³uguje operator porównania \texorpdfstring{$<$}{<}=.
+
+Przyk³ad u¿ycia\+:
+
+std\+::vector$<$int$>$ arr = \{5, 2, 9, 1, 5, 6\}; Merge\+Sort$<$int$>$\+::sort(arr);
+
+Po wywo³aniu metody \doxylink{class_merge_sort_a0cc3836829698a409f989019b58a7f15}{sort()}, wektor vec bêdzie posortowany rosn¹co.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Typ elementów wektora do posortowania (int, double, itp.). \\
+\hline
+\end{DoxyTemplParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_merge_sort_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_merge_sort_a0cc3836829698a409f989019b58a7f15}\index{MergeSort$<$ T $>$@{MergeSort$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!MergeSort$<$ T $>$@{MergeSort$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily \label{class_merge_sort_a0cc3836829698a409f989019b58a7f15} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{class_merge_sort}{Merge\+Sort}}$<$ T $>$\+::sort (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{arr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Sortuje wektor arr za pomoc¹ algorytmu sortowania przez scalanie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Wektor do posortowania. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+mergesort.\+h\end{DoxyCompactItemize}

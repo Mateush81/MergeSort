@@ -10,12 +10,12 @@
 
 • 1. zachowuje tablicę niezmienioną, gdy ona jest już posortowana rosnąco,
 • 2. potrafi posortować tablicę, która jest posortowana w odwrotnej kolejności,
-• 3. poprawnie sortuje losową tablicę liczb,                                            =========> działa poprawnie ✅ <=========
+• 3. poprawnie sortuje losową tablicę liczb,                                            
 • 4. poprawnie sortuje tablice tylko z liczbami ujemnymi,
 • 5. poprawnie sortuje tablice z liczbami ujemnymi i liczbami dodatnimi,
-• 6. obsługuje pustą tablicę bez rzucania wyjątkiem,                                    =========> działa poprawnie ✅ <=========
-• 7. nie zmienia tablicy, która zawiera tylko jeden element,                            =========> działa poprawnie ✅ <=========
-• 8. poprawnie sortuje tablicę z duplikatami liczb,                                     =========> działa poprawnie ✅ <=========
+• 6. obsługuje pustą tablicę bez rzucania wyjątkiem,                                   
+• 7. nie zmienia tablicy, która zawiera tylko jeden element,                            
+• 8. poprawnie sortuje tablicę z duplikatami liczb,                                     
 • 9. poprawnie sortuje tablice ujemną z duplikatami,
 • 10. poprawnie sortuje tablice z liczbami ujemnymi, dodatnimi oraz duplikatami,
 • 11. poprawnie sortuje tablicę zawierającą tylko dwa elementy w kolejności rosnącej,

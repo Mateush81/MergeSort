@@ -1,0 +1,58 @@
+\chapter{
+\begin{DoxyEnumerate}
+\item Uruchamianie programu ({\ttfamily main.\+cpp}) 
+\end{DoxyEnumerate}}
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{1. Uruchamianie programu ($<$tt$>$main.cpp$<$/tt$>$)@{1. Uruchamianie programu ($<$tt$>$main.cpp$<$/tt$>$)}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+
+
+
+\begin{DoxyEnumerate}
+\item Otworzyć projekt w Visual Studio.
+\item W Solution Explorer kliknąć PPM na {\ttfamily main.\+cpp}.
+\item Wybrać "{}\+Include in Build"{}, jeśli był wyłączony.
+\item W pliku {\ttfamily test.\+cpp} kliknąć "{}\+Exclude from Build"{}, żeby nie było podwójnego {\ttfamily main}.
+\item Ustawić projekt jako Start\+Up Project (jeśli nie jest).
+\item Odpalić program.
+\end{DoxyEnumerate}
+
+Program posortuje dwie tablice i wypisze wynik w konsoli.
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysubsection{\texorpdfstring{2. Uruchamianie testów Google Test}{2. Uruchamianie testów Google Test}}\label{md__r_e_a_d_m_e_autotoc_md2}
+
+\begin{DoxyEnumerate}
+\item W Solution Explorer wyłączyć kompilację {\ttfamily main.\+cpp} ~\newline
+ (PPM → Exclude from Build).
+\item Włączyć kompilację {\ttfamily test.\+cpp} ~\newline
+ (PPM → Include in Build).
+\item Upewnić się, że projekt typu „\+Google Test” jest ustawiony jako Start\+Up Project.
+\item Otworzyć {\bfseries{Test Explorer}}\+: ~\newline
+ {\ttfamily Test → Test Explorer} lub po prostu odplić program (F5).
+\end{DoxyEnumerate}
+
+Wszystkie 13 testów powinno przejść poprawnie.
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{\texorpdfstring{Co testują testy?}{Co testują testy?}}\label{md__r_e_a_d_m_e_autotoc_md4}
+W {\ttfamily test.\+cpp} znajdują się przypadki sprawdzające\+:
+
+
+\begin{DoxyItemize}
+\item tablica już posortowana
+\item tablica posortowana odwrotnie
+\item losowe liczby
+\item liczby ujemne
+\item liczby dodatnie i ujemne
+\item pusty vector
+\item jeden element
+\item duplikaty
+\item ujemne + duplikaty
+\item mix ujemne/dodatnie/duplikaty
+\item dwa elementy już posortowane
+\item duża tablica (100+ elementów)
+\item duża tablica mieszana
+\end{DoxyItemize}
+
+Wszystkie testy powinny zakończyć się na zielono. 
