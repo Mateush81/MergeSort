@@ -1,7 +1,10 @@
-#ifndef MERGESORT_H
-#define MERGESORT_H
-
+#pragma once
 #include <vector>
+
+
+//
+
+
 
 template<typename T>
 class MergeSort {
@@ -61,4 +64,3 @@ private:
     }
 };
 
-#endif
