@@ -30,61 +30,37 @@
 
 
 
-
-
-
-
-
-
-
-// Prosty test sortowania intów
-TEST(MergeSortTests, SortIntBasic) {
-    std::vector<int> v = { 5, 2, 9, 1, 0 };
+// podstawowy test sortowania int
+TEST(MergeSortTests, BasicIntSort) {
+    std::vector<int> v = { 5, 3, 1, 4, 2 };
     MergeSort<int>::sort(v);
-
-    EXPECT_EQ(v[0], 0);
-    EXPECT_EQ(v[1], 1);
-    EXPECT_EQ(v[2], 2);
-    EXPECT_EQ(v[3], 5);
-    EXPECT_EQ(v[4], 9);
+    EXPECT_EQ(v, (std::vector<int>{1, 2, 3, 4, 5}));
 }
 
-// Test jednego elementu
-TEST(MergeSortTests, SingleElement) {
-    std::vector<int> v = { 42 };
-    MergeSort<int>::sort(v);
-
-    EXPECT_EQ(v[0], 42);
+// sortowanie double
+TEST(MergeSortTests, BasicDoubleSort) {
+    std::vector<double> v = { 2.5, 1.1, 3.3 };
+    MergeSort<double>::sort(v);
+    EXPECT_EQ(v, (std::vector<double>{1.1, 2.5, 3.3}));
 }
 
-// Test pustego wektora
-TEST(MergeSortTests, EmptyVector) {
+// pusty
+TEST(MergeSortTests, Empty) {
     std::vector<int> v;
     MergeSort<int>::sort(v);
-
     EXPECT_TRUE(v.empty());
 }
 
-// Test duplikatów
-TEST(MergeSortTests, Duplicates) {
-    std::vector<int> v = { 4, 4, 2, 2, 4 };
+// jeden element
+TEST(MergeSortTests, Single) {
+    std::vector<int> v = { 10 };
     MergeSort<int>::sort(v);
-
-    EXPECT_EQ(v[0], 2);
-    EXPECT_EQ(v[1], 2);
-    EXPECT_EQ(v[2], 4);
-    EXPECT_EQ(v[3], 4);
-    EXPECT_EQ(v[4], 4);
+    EXPECT_EQ(v[0], 10);
 }
 
-// Test liczb typu double
-TEST(MergeSortTests, SortDoubleBasic) {
-    std::vector<double> v = { 3.1, 2.2, 5.5, 1.0 };
-    MergeSort<double>::sort(v);
-
-    EXPECT_DOUBLE_EQ(v[0], 1.0);
-    EXPECT_DOUBLE_EQ(v[1], 2.2);
-    EXPECT_DOUBLE_EQ(v[2], 3.1);
-    EXPECT_DOUBLE_EQ(v[3], 5.5);
+// duplikaty
+TEST(MergeSortTests, Duplicates) {
+    std::vector<int> v = { 4,4,2,2,4 };
+    MergeSort<int>::sort(v);
+    EXPECT_EQ(v, (std::vector<int>{2, 2, 4, 4, 4}));
 }
-
