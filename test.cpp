@@ -64,3 +64,11 @@ TEST(MergeSortTests, Duplicates) {
     MergeSort<int>::sort(v);
     EXPECT_EQ(v, (std::vector<int>{2, 2, 4, 4, 4}));
 }
+
+
+
+TEST(MergeSortTests, UjemneDup) {
+	std::vector<int> v = { -3, -1, -1, -5, -2 };
+	MergeSort<int>::sort(v);
+    EXPECT_EQ(v, (std::vector<int>{-5, -3, -2, -1, -1}));
+}
