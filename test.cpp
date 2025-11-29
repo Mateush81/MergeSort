@@ -3,6 +3,9 @@
 
 
 // Testy jednostkowe dla MergeSort
+// Jeden test to jeden przypadek użycia funkcji sortującej
+// Różne typy danych i różne scenariusze
+
 /*
 
 • 1. zachowuje tablicę niezmienioną, gdy ona jest już posortowana rosnąco,
@@ -23,7 +26,7 @@
 
 
 
-// 1. tablica już posortowana rosnąco
+// 1. tablica już posortowana rosnąco ( powinno pozostać be zmian )
 TEST(MergeSortTests, AlreadySorted) {
     std::vector<int> v = { 1, 2, 3, 4, 5 };
     MergeSort<int>::sort(v);
@@ -126,6 +129,6 @@ TEST(MergeSortTests, LargeMixedVector) {
 
     // sprawdzamy pierwsze i ostatnie elementy,
     // żeby nie pisać 120 expectów
-    EXPECT_EQ(v.front(), -50);
-    EXPECT_EQ(v.back(), 50);
+    EXPECT_EQ(v.front(), -50);   // front() to pierwszy element -> powinien być najmniejszy możliwy = -50
+    EXPECT_EQ(v.back(), 50);    // back() to ostatni element -> powinien być największy możliwy = 50
 }
