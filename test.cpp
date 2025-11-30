@@ -44,23 +44,23 @@ TEST(MergeSortTests, ReverseSorted) {
 
 // 3. losowa tablica
 TEST(MergeSortTests, RandomNumbers) {
-    std::vector<int> v = { 7, 1, 4, 9, 2 };
+    std::vector<int> v = { 13, -2, 44, 7, 19, 5 };
     MergeSort<int>::sort(v);
-    EXPECT_EQ(v, (std::vector<int>{1, 2, 4, 7, 9}));
+    EXPECT_EQ(v, (std::vector<int>{-2, 5, 7, 13, 19, 44}));
 }
 
 // 4. tylko liczby ujemne
 TEST(MergeSortTests, NegativeOnly) {
-    std::vector<int> v = { -5, -1, -10, -3 };
+    std::vector<int> v = { -9, -17, -4, -22, -11 };
     MergeSort<int>::sort(v);
-    EXPECT_EQ(v, (std::vector<int>{-10, -5, -3, -1}));
+    EXPECT_EQ(v, (std::vector<int>{-22, -17, -11, -9, -4}));
 }
 
 // 5. mieszane ujemne i dodatnie
 TEST(MergeSortTests, MixedNegativePositive) {
-    std::vector<int> v = { -3, 7, -1, 4 };
+    std::vector<int> v = { -13, 8, 0, -4, 21, 5 };
     MergeSort<int>::sort(v);
-    EXPECT_EQ(v, (std::vector<int>{-3, -1, 4, 7}));
+    EXPECT_EQ(v, (std::vector<int>{-13, -4, 0, 5, 8, 21}));
 }
 
 // 6. pusta tablica
@@ -72,30 +72,30 @@ TEST(MergeSortTests, EmptyVector) {
 
 // 7. jeden element
 TEST(MergeSortTests, SingleElement) {
-    std::vector<int> v = { 42 };
+    std::vector<int> v = { 81 };
     MergeSort<int>::sort(v);
-    EXPECT_EQ(v[0], 42);
+    EXPECT_EQ(v[0], 81);
 }
 
 // 8. duplikaty
 TEST(MergeSortTests, Duplicates) {
-    std::vector<int> v = { 4, 4, 2, 2, 4 };
+    std::vector<int> v = { 12, 12, 7, 12, 7, 3 };
     MergeSort<int>::sort(v);
-    EXPECT_EQ(v, (std::vector<int>{2, 2, 4, 4, 4}));
+    EXPECT_EQ(v, (std::vector<int>{3, 7, 7, 12, 12, 12}));
 }
 
 // 9. ujemne z duplikatami
 TEST(MergeSortTests, NegativeDuplicates) {
-    std::vector<int> v = { -2, -5, -2, -1, -5 };
+    std::vector<int> v = { -6, -1, -6, -12, -1, -3 };
     MergeSort<int>::sort(v);
-    EXPECT_EQ(v, (std::vector<int>{-5, -5, -2, -2, -1}));
+    EXPECT_EQ(v, (std::vector<int>{-12, -6, -6, -3, -1, -1}));
 }
 
 // 10. ujemne, dodatnie i duplikaty
 TEST(MergeSortTests, MixedAll) {
-    std::vector<int> v = { -2, 4, -2, 7, 0, 4 };
+    std::vector<int> v = { -8, 14, -8, 0, 14, 3, -2 };
     MergeSort<int>::sort(v);
-    EXPECT_EQ(v, (std::vector<int>{-2, -2, 0, 4, 4, 7}));
+    EXPECT_EQ(v, (std::vector<int>{-8, -8, -2, 0, 3, 14, 14}));
 }
 
 // 11. dwa elementy posortowane
